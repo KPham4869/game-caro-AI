@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+    <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
+    <title>Cờ Caro - Nhóm 3</title>
+</head>
+<body>
+    <div class="container">
+        <!--Tiêu đề-->
+        <div class="title">
+            <h2>CỜ CARO</h2>
+        </div>
+
+        <!--Các nút chức năng-->
+        <div class="board">
+            <div style="font-size: 16px; margin-right: 8px;">
+                <span>Thời gian X đánh</span>
+                <div class="time" id="timeX">
+                    01:00
+                </div>
+            </div>
+            <div class="list-header">
+                <button class="play" id="play" onclick="resetGame()">Restart</button>
+                <select class="table" id="select-table" style="text-align: center;">
+                    <!-- <option value="#">---Chọn---</option> -->
+                    
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                    <option value="7">7x7</option>
+                    <option value="11">11x11</option>
+                </select>
+                <select style="text-align: center; margin-left: 20px;" id="select-player">
+                    <option style="text-align: center;" value="#">---Chọn---</option>
+                    <option style="text-align: center;" value="AI">AI</option>
+                    <option style="text-align: center;" value="PS">Người</option>
+                </select>
+            </div>
+            <div style="font-size: 16px; margin-left: 8px;">
+                <span>Thời gian O đánh</span>
+                <div class="time" id="timeO">
+                    01:00
+                </div>
+            </div>
+            <button id="pauseMucsic" onclick="pauseMusic()">Pause</button>
+        </div>
+        <div style="margin-top: 20px;">
+            <p style="font-size: 20px; display:inline;">Nước đi của: 
+                <span id="swap-Player" style="display:inline; color: blue;">X</span>
+            </p>
+            <audio id="start-music" loop>
+                <source src="nhac-hai-huoc.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="pause-music">
+                <source src="votay.mp3" type="audio/mpeg">
+            </audio>
+           
+        </div>
+        <!--Bàn cờ-->
+        <div id="table" class="game"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
